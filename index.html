@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Diplomata Seguros — Saúde, Vida e Odontológico em Curitiba | +25 anos cuidando de quem importa</title>
+<meta name="description" content="Corretora de benefícios em Curitiba há mais de 25 anos. Planos de saúde individuais, familiares e empresariais, seguros de vida e planos odontológicos com as principais operadoras do mercado.">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --azul: #0a2540;
+    --azul-medio: #14365c;
+    --azul-claro: #1e4778;
+    --dourado: #c9a86a;
+    --dourado-escuro: #a98948;
+    --whatsapp: #25d366;
+    --whatsapp-escuro: #1ebe57;
+    --branco: #ffffff;
+    --cinza-bg: #f6f7fa;
+    --cinza-borda: #e3e6ec;
+    --cinza-texto: #4a5568;
+    --cinza-fraco: #718096;
+    --sombra: 0 4px 20px rgba(10, 37, 64, 0.08);
+    --sombra-forte: 0 18px 50px rgba(10, 37, 64, 0.18);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Inter', sans-serif; color: var(--azul); background: var(--branco); line-height: 1.55; -webkit-font-smoothing: antialiased; }
+  img { max-width: 100%; display: block; }
+  a { color: inherit; text-decoration: none; }
+  .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+  /* BARRA TOPO */
+  .barra-topo {
+    background: var(--azul);
+    color: var(--branco);
+    text-align: center;
+    padding: 10px 16px;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+  }
+  .barra-topo strong { color: var(--dourado); font-weight: 700; }
+  .barra-topo span { margin: 0 14px; opacity: 0.6; }
+
+  /* HEADER */
+  header {
+    background: var(--branco);
+    padding: 16px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid var(--cinza-borda);
+  }
+  header .container { display: flex; justify-content: space-between; align-items: center; }
+  .logo {
+    font-size: 22px;
+    font-weight: 900;
+    color: var(--azul);
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+  }
+  .logo span { color: var(--dourado); font-weight: 700; }
+  header nav { display: flex; align-items: center; gap: 28px; }
+  header nav a.link { color: var(--cinza-texto); font-size: 14px; font-weight: 500; transition: color .2s; }
+  header nav a.link:hover { color: var(--azul); }
+  .btn-wa {
+    background: var(--whatsapp);
+    color: var(--branco) !important;
+    padding: 12px 22px;
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: 14px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: background .2s, transform .2s;
+  }
+  .btn-wa:hover { background: var(--whatsapp-escuro); transform: translateY(-1px); }
+  .btn-wa svg { width: 16px; height: 16px; fill: currentColor; }
+
+  /* HERO */
+  .hero {
+    background: linear-gradient(135deg, var(--azul) 0%, var(--azul-medio) 60%, var(--azul-claro) 100%);
+    color: var(--branco);
+    padding: 80px 0 90px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -120px; right: -120px;
+    width: 380px; height: 380px;
+    background: radial-gradient(circle, rgba(201,168,106,0.18) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .hero .container { display: grid; grid-template-columns: 1.15fr 1fr; gap: 60px; align-items: center; position: relative; }
+  .selo-hero {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(201,168,106,0.15);
+    border: 1px solid rgba(201,168,106,0.4);
+    padding: 8px 16px;
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--dourado);
+    margin-bottom: 24px;
+    letter-spacing: 0.3px;
+  }
+  .hero h1 {
+    font-size: 46px;
+    font-weight: 800;
+    line-height: 1.15;
+    margin-bottom: 22px;
+    letter-spacing: -0.5px;
+  }
+  .hero h1 strong { color: var(--dourado); font-weight: 800; }
+  .hero p.sub {
+    font-size: 18px;
+    color: rgba(255,255,255,0.85);
+    margin-bottom: 32px;
+    max-width: 540px;
+  }
+  .hero-ctas { display: flex; gap: 14px; flex-wrap: wrap; }
+  .btn-primario {
+    background: var(--whatsapp);
+    color: var(--branco);
+    padding: 18px 30px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 16px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: background .2s, transform .2s;
+    box-shadow: 0 8px 22px rgba(37,211,102,0.35);
+  }
+  .btn-primario:hover { background: var(--whatsapp-escuro); transform: translateY(-2px); }
+  .btn-primario svg { width: 20px; height: 20px; fill: currentColor; }
+  .btn-secundario {
+    background: transparent;
+    color: var(--branco);
+    padding: 18px 28px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 15px;
+    border: 1.5px solid rgba(255,255,255,0.35);
+    transition: all .2s;
+  }
+  .btn-secundario:hover { background: rgba(255,255,255,0.08); border-color: var(--dourado); }
+
+  /* CARD COTAÇÃO HERO */
+  .card-cotacao {
+    background: var(--branco);
+    border-radius: 14px;
+    padding: 34px 32px;
+    color: var(--azul);
+    box-shadow: var(--sombra-forte);
+    position: relative;
+  }
+  .card-cotacao h3 { font-size: 22px; margin-bottom: 8px; font-weight: 800; }
+  .card-cotacao p.intro { font-size: 14px; color: var(--cinza-texto); margin-bottom: 22px; }
+  .card-cotacao .campo { margin-bottom: 14px; }
+  .card-cotacao label { display: block; font-size: 13px; font-weight: 600; color: var(--azul); margin-bottom: 6px; }
+  .card-cotacao input, .card-cotacao select {
+    width: 100%;
+    padding: 13px 14px;
+    border: 1.5px solid var(--cinza-borda);
+    border-radius: 8px;
+    font-size: 15px;
+    font-family: inherit;
+    color: var(--azul);
+    transition: border-color .2s;
+  }
+  .card-cotacao input:focus, .card-cotacao select:focus { outline: none; border-color: var(--dourado); }
+  .card-cotacao button[type=submit] {
+    width: 100%;
+    background: var(--azul);
+    color: var(--branco);
+    padding: 16px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 700;
+    font-family: inherit;
+    cursor: pointer;
+    margin-top: 8px;
+    transition: background .2s;
+  }
+  .card-cotacao button[type=submit]:hover { background: var(--azul-claro); }
+  .card-cotacao .selo { font-size: 12px; color: var(--cinza-fraco); text-align: center; margin-top: 12px; }
+
+  /* FAIXA NUMEROS */
+  .faixa-numeros {
+    background: var(--branco);
+    border-bottom: 1px solid var(--cinza-borda);
+    padding: 40px 0;
+  }
+  .faixa-numeros .container { display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px; text-align: center; }
+  .faixa-numeros .item .num { font-size: 38px; font-weight: 900; color: var(--azul); line-height: 1; }
+  .faixa-numeros .item .num span { color: var(--dourado); }
+  .faixa-numeros .item .label { font-size: 13px; color: var(--cinza-texto); margin-top: 8px; font-weight: 500; letter-spacing: 0.3px; }
+
+  /* SEÇÕES PADRÃO */
+  section.bloco { padding: 90px 0; }
+  section.bloco.cinza { background: var(--cinza-bg); }
+  .titulo-bloco { text-align: center; max-width: 720px; margin: 0 auto 60px; }
+  .titulo-bloco .eyebrow { display: inline-block; color: var(--dourado-escuro); font-size: 13px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 14px; }
+  .titulo-bloco h2 { font-size: 38px; font-weight: 800; line-height: 1.2; letter-spacing: -0.5px; margin-bottom: 16px; }
+  .titulo-bloco p { font-size: 17px; color: var(--cinza-texto); }
+
+  /* PLANOS */
+  .planos-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px; }
+  .plano-card {
+    background: var(--branco);
+    border: 1px solid var(--cinza-borda);
+    border-radius: 14px;
+    padding: 34px 30px;
+    transition: transform .25s, box-shadow .25s, border-color .25s;
+    position: relative;
+  }
+  .plano-card:hover { transform: translateY(-6px); box-shadow: var(--sombra-forte); border-color: var(--dourado); }
+  .plano-card .icone {
+    width: 52px; height: 52px;
+    background: linear-gradient(135deg, var(--azul) 0%, var(--azul-claro) 100%);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 22px;
+  }
+  .plano-card .icone svg { width: 26px; height: 26px; fill: var(--dourado); }
+  .plano-card h3 { font-size: 22px; font-weight: 800; margin-bottom: 12px; }
+  .plano-card p { color: var(--cinza-texto); font-size: 15px; margin-bottom: 18px; }
+  .plano-card ul { list-style: none; }
+  .plano-card ul li {
+    padding-left: 24px;
+    position: relative;
+    font-size: 14px;
+    color: var(--cinza-texto);
+    margin-bottom: 8px;
+  }
+  .plano-card ul li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--dourado);
+    font-weight: 900;
+  }
+
+  /* OPERADORAS */
+  .operadoras-bar {
+    background: var(--branco);
+    padding: 50px 0;
+    border-top: 1px solid var(--cinza-borda);
+    border-bottom: 1px solid var(--cinza-borda);
+  }
+  .operadoras-bar .titulo {
+    text-align: center;
+    color: var(--cinza-fraco);
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 28px;
+  }
+  .operadoras-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px 28px;
+  }
+  .operadora-pill {
+    background: var(--cinza-bg);
+    border: 1px solid var(--cinza-borda);
+    color: var(--azul);
+    padding: 12px 22px;
+    border-radius: 30px;
+    font-size: 15px;
+    font-weight: 600;
+    transition: all .2s;
+  }
+  .operadora-pill:hover { background: var(--azul); color: var(--branco); border-color: var(--azul); }
+
+  /* PORQUÊS */
+  .porques-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
+  .porque-card {
+    background: var(--branco);
+    border-radius: 14px;
+    padding: 38px 32px;
+    border-top: 4px solid var(--dourado);
+    box-shadow: var(--sombra);
+  }
+  .porque-card .numero {
+    font-size: 56px;
+    font-weight: 900;
+    color: var(--dourado);
+    line-height: 1;
+    margin-bottom: 14px;
+    opacity: 0.85;
+  }
+  .porque-card h3 { font-size: 22px; font-weight: 800; margin-bottom: 14px; line-height: 1.3; }
+  .porque-card p { font-size: 15px; color: var(--cinza-texto); }
+
+  /* COMO FUNCIONA */
+  .passos-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+  .passo-card {
+    text-align: center;
+    padding: 30px 20px;
+  }
+  .passo-card .num-passo {
+    width: 56px; height: 56px;
+    background: var(--azul);
+    color: var(--dourado);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    font-weight: 900;
+    margin: 0 auto 18px;
+  }
+  .passo-card h4 { font-size: 17px; font-weight: 800; margin-bottom: 10px; }
+  .passo-card p { font-size: 14px; color: var(--cinza-texto); }
+
+  /* SOBRE */
+  .sobre-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+  .sobre-conteudo .eyebrow { color: var(--dourado-escuro); font-size: 13px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 14px; display: block; }
+  .sobre-conteudo h2 { font-size: 36px; font-weight: 800; line-height: 1.2; margin-bottom: 20px; letter-spacing: -0.5px; }
+  .sobre-conteudo p { font-size: 16px; color: var(--cinza-texto); margin-bottom: 16px; }
+  .sobre-bullets {
+    list-style: none;
+    margin-top: 24px;
+  }
+  .sobre-bullets li {
+    padding: 14px 0 14px 36px;
+    position: relative;
+    border-bottom: 1px solid var(--cinza-borda);
+    font-size: 15px;
+    color: var(--azul);
+    font-weight: 600;
+  }
+  .sobre-bullets li:last-child { border-bottom: none; }
+  .sobre-bullets li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 24px; height: 24px;
+    background: var(--dourado);
+    color: var(--branco);
+    border-radius: 50%;
+    font-size: 12px;
+    font-weight: 900;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .sobre-visual {
+    background: linear-gradient(135deg, var(--azul) 0%, var(--azul-medio) 100%);
+    border-radius: 18px;
+    padding: 60px 50px;
+    color: var(--branco);
+    position: relative;
+    overflow: hidden;
+  }
+  .sobre-visual::before {
+    content: '';
+    position: absolute;
+    top: -60px; right: -60px;
+    width: 240px; height: 240px;
+    background: radial-gradient(circle, rgba(201,168,106,0.25) 0%, transparent 70%);
+  }
+  .sobre-visual .num-grande { font-size: 96px; font-weight: 900; line-height: 1; color: var(--dourado); position: relative; }
+  .sobre-visual .num-grande sup { font-size: 36px; vertical-align: super; }
+  .sobre-visual .num-label { font-size: 18px; font-weight: 600; margin-top: 8px; position: relative; }
+  .sobre-visual .frase { margin-top: 32px; font-size: 17px; line-height: 1.5; opacity: 0.9; position: relative; }
+
+  /* FAQ */
+  .faq-lista { max-width: 820px; margin: 0 auto; }
+  .faq-item {
+    background: var(--branco);
+    border: 1px solid var(--cinza-borda);
+    border-radius: 10px;
+    margin-bottom: 14px;
+    overflow: hidden;
+  }
+  .faq-item summary {
+    padding: 22px 26px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--azul);
+  }
+  .faq-item summary::-webkit-details-marker { display: none; }
+  .faq-item summary::after {
+    content: '+';
+    font-size: 26px;
+    font-weight: 400;
+    color: var(--dourado);
+    transition: transform .25s;
+  }
+  .faq-item[open] summary::after { transform: rotate(45deg); }
+  .faq-item .resposta {
+    padding: 0 26px 22px;
+    color: var(--cinza-texto);
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  /* CTA FINAL */
+  .cta-final {
+    background: linear-gradient(135deg, var(--azul) 0%, var(--azul-medio) 100%);
+    color: var(--branco);
+    padding: 80px 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .cta-final::before {
+    content: '';
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px; height: 600px;
+    background: radial-gradient(circle, rgba(201,168,106,0.12) 0%, transparent 60%);
+  }
+  .cta-final .container { position: relative; }
+  .cta-final h2 { font-size: 40px; font-weight: 800; margin-bottom: 16px; letter-spacing: -0.5px; }
+  .cta-final h2 strong { color: var(--dourado); }
+  .cta-final p { font-size: 18px; opacity: 0.9; margin-bottom: 32px; max-width: 620px; margin-left: auto; margin-right: auto; }
+  .cta-final .ctas-row { display: inline-flex; gap: 14px; flex-wrap: wrap; justify-content: center; }
+
+  /* FOOTER */
+  footer {
+    background: #061829;
+    color: rgba(255,255,255,0.65);
+    padding: 60px 0 30px;
+    font-size: 14px;
+  }
+  footer .grid-foot { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 40px; margin-bottom: 40px; }
+  footer h5 { color: var(--branco); font-size: 15px; font-weight: 700; margin-bottom: 16px; letter-spacing: 0.3px; }
+  footer ul { list-style: none; }
+  footer ul li { margin-bottom: 8px; }
+  footer ul li a:hover { color: var(--dourado); }
+  footer .logo-foot { color: var(--branco); font-size: 22px; font-weight: 900; letter-spacing: 1.5px; margin-bottom: 14px; }
+  footer .logo-foot span { color: var(--dourado); }
+  footer .descricao-foot { font-size: 14px; line-height: 1.6; margin-bottom: 18px; }
+  footer .copy {
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 22px;
+    text-align: center;
+    font-size: 13px;
+    opacity: 0.7;
+  }
+
+  /* WHATSAPP FLUTUANTE */
+  .wa-float {
+    position: fixed;
+    bottom: 24px; right: 24px;
+    background: var(--whatsapp);
+    color: var(--branco);
+    width: 60px; height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 30px rgba(37,211,102,0.45);
+    z-index: 999;
+    transition: transform .2s;
+  }
+  .wa-float:hover { transform: scale(1.08); }
+  .wa-float svg { width: 30px; height: 30px; fill: currentColor; }
+
+  /* RESPONSIVO */
+  @media (max-width: 960px) {
+    .hero .container, .sobre-grid { grid-template-columns: 1fr; gap: 40px; }
+    .hero h1 { font-size: 34px; }
+    .titulo-bloco h2, .sobre-conteudo h2, .cta-final h2 { font-size: 28px; }
+    .planos-grid, .porques-grid { grid-template-columns: 1fr; }
+    .passos-grid { grid-template-columns: repeat(2, 1fr); }
+    .faixa-numeros .container { grid-template-columns: repeat(2, 1fr); gap: 24px; }
+    footer .grid-foot { grid-template-columns: 1fr 1fr; }
+    header nav .link { display: none; }
+    header { padding: 12px 0; }
+    section.bloco { padding: 60px 0; }
+    .hero { padding: 50px 0 60px; }
+  }
+  @media (max-width: 520px) {
+    .faixa-numeros .container, .passos-grid, footer .grid-foot { grid-template-columns: 1fr; }
+    .hero h1 { font-size: 28px; }
+    .card-cotacao { padding: 26px 22px; }
+    .barra-topo span { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<div class="barra-topo">
+  Atendimento humano, sem call center <span>•</span> <strong>+25 anos em Curitiba</strong> <span>•</span> Resposta no WhatsApp em até 15 min
+</div>
+
+<header>
+  <div class="container">
+    <a href="#" class="logo">DIPLOMATA<span>SEGUROS</span></a>
+    <nav>
+      <a href="#planos" class="link">Planos</a>
+      <a href="#operadoras" class="link">Operadoras</a>
+      <a href="#sobre" class="link">Sobre</a>
+      <a href="#faq" class="link">FAQ</a>
+      <a href="https://wa.me/5541991342273" class="btn-wa">
+        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Falar no WhatsApp
+      </a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <div>
+      <span class="selo-hero">✦ Corretora de benefícios desde 1999</span>
+      <h1>O plano certo para você, sua família ou sua empresa em <strong>Curitiba</strong>.</h1>
+      <p class="sub">Comparamos as 8 maiores operadoras do mercado e desenhamos a solução de saúde, vida e odonto que cabe no seu orçamento — com a consultoria humana de quem está há mais de 25 anos cuidando de quem importa.</p>
+      <div class="hero-ctas">
+        <a href="https://wa.me/5541991342273?text=Ol%C3%A1%2C%20gostaria%20de%20uma%20cota%C3%A7%C3%A3o" class="btn-primario">
+          <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Quero uma cotação
+        </a>
+        <a href="#planos" class="btn-secundario">Ver tipos de plano</a>
+      </div>
+    </div>
+
+    <form class="card-cotacao" onsubmit="event.preventDefault(); window.location.href='https://wa.me/5541991342273?text=Ol%C3%A1%2C%20meu%20nome%20%C3%A9%20'+encodeURIComponent(document.getElementById('nome').value)+'%2C%20gostaria%20de%20uma%20cota%C3%A7%C3%A3o%20de%20'+encodeURIComponent(document.getElementById('tipo').value);">
+      <h3>Cotação rápida</h3>
+      <p class="intro">Preencha e fale agora com um consultor.</p>
+      <div class="campo">
+        <label for="nome">Seu nome</label>
+        <input type="text" id="nome" placeholder="Como podemos te chamar?" required>
+      </div>
+      <div class="campo">
+        <label for="tel">WhatsApp</label>
+        <input type="tel" id="tel" placeholder="(41) 9 9999-9999" required>
+      </div>
+      <div class="campo">
+        <label for="tipo">O que você procura?</label>
+        <select id="tipo" required>
+          <option value="">Selecione...</option>
+          <option value="plano de sa%C3%BAde individual">Plano de saúde individual / familiar</option>
+          <option value="plano de sa%C3%BAde empresarial (PME)">Plano de saúde empresarial (PME)</option>
+          <option value="plano odontol%C3%B3gico">Plano odontológico</option>
+          <option value="seguro de vida">Seguro de vida</option>
+          <option value="gest%C3%A3o de risco corporativa">Gestão de risco corporativa</option>
+        </select>
+      </div>
+      <button type="submit">Quero falar com um consultor →</button>
+      <p class="selo">🔒 Seus dados são tratados com sigilo. Sem compromisso.</p>
+    </form>
+  </div>
+</section>
+
+<!-- FAIXA NÚMEROS -->
+<section class="faixa-numeros">
+  <div class="container">
+    <div class="item">
+      <div class="num">+25<span> anos</span></div>
+      <div class="label">DE MERCADO</div>
+    </div>
+    <div class="item">
+      <div class="num">8<span>+</span></div>
+      <div class="label">OPERADORAS PARCEIRAS</div>
+    </div>
+    <div class="item">
+      <div class="num">100%</div>
+      <div class="label">ATENDIMENTO HUMANO</div>
+    </div>
+    <div class="item">
+      <div class="num">CWB</div>
+      <div class="label">SEDE EM CURITIBA/PR</div>
+    </div>
+  </div>
+</section>
+
+<!-- PLANOS -->
+<section class="bloco" id="planos">
+  <div class="container">
+    <div class="titulo-bloco">
+      <span class="eyebrow">Soluções completas</span>
+      <h2>Tudo o que sua saúde e sua empresa precisam, em um único lugar.</h2>
+      <p>Pessoa física, família ou empresa: a Diplomata desenha a combinação certa de benefícios e seguros para cada momento da sua vida.</p>
+    </div>
+
+    <div class="planos-grid">
+      <div class="plano-card">
+        <div class="icone">
+          <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"/></svg>
+        </div>
+        <h3>Saúde individual e familiar</h3>
+        <p>Encontre o plano com a melhor rede de atendimento em Curitiba e região para você e sua família.</p>
+        <ul>
+          <li>Comparação entre 8 operadoras</li>
+          <li>Adesão por CNPJ MEI quando vantajoso</li>
+          <li>Acompanhamento durante toda a vigência</li>
+        </ul>
+      </div>
+
+      <div class="plano-card">
+        <div class="icone">
+          <svg viewBox="0 0 24 24"><path d="M20 6h-4V4c0-1.11-.89-2-2-2h-4c-1.11 0-2 .89-2 2v2H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-6 0h-4V4h4v2z"/></svg>
+        </div>
+        <h3>Saúde empresarial (PME)</h3>
+        <p>Plano coletivo que retém talento, reduz absenteísmo e cabe no orçamento da sua PME.</p>
+        <ul>
+          <li>Cotação a partir de 2 vidas</li>
+          <li>Negociação anual de reajuste</li>
+          <li>Gestão de inclusão e exclusão de vidas</li>
+        </ul>
+      </div>
+
+      <div class="plano-card">
+        <div class="icone">
+          <svg viewBox="0 0 24 24"><path d="M19 5h-2V3H7v2H5c-1.1 0-2 .9-2 2v1c0 2.55 1.92 4.63 4.39 4.94.63 1.5 1.98 2.63 3.61 2.96V19H7v2h10v-2h-4v-3.1c1.63-.33 2.98-1.46 3.61-2.96C19.08 12.63 21 10.55 21 8V7c0-1.1-.9-2-2-2z"/></svg>
+        </div>
+        <h3>Vida e Odonto</h3>
+        <p>Proteção financeira para quem você ama e cuidado bucal com a melhor rede credenciada.</p>
+        <ul>
+          <li>Seguros de vida individual e em grupo</li>
+          <li>Odontológico individual e empresarial</li>
+          <li>Combinações para reduzir o custo total</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OPERADORAS -->
+<section class="operadoras-bar" id="operadoras">
+  <div class="container">
+    <div class="titulo">Trabalhamos com as principais operadoras do mercado</div>
+    <div class="operadoras-grid">
+      <span class="operadora-pill">Unimed Curitiba</span>
+      <span class="operadora-pill">Hapvida</span>
+      <span class="operadora-pill">Paraná Clínicas</span>
+      <span class="operadora-pill">Bradesco Saúde</span>
+      <span class="operadora-pill">Clinipam</span>
+      <span class="operadora-pill">Amil</span>
+      <span class="operadora-pill">SulAmérica</span>
+      <span class="operadora-pill">MedSenior</span>
+    </div>
+  </div>
+</section>
+
+<!-- 3 PORQUÊS -->
+<section class="bloco cinza">
+  <div class="container">
+    <div class="titulo-bloco">
+      <span class="eyebrow">Por que Diplomata</span>
+      <h2>Três motivos para contratar seu benefício com quem entende do mercado.</h2>
+    </div>
+
+    <div class="porques-grid">
+      <div class="porque-card">
+        <div class="numero">01</div>
+        <h3>Você não paga mais por ter um corretor.</h3>
+        <p>O valor da mensalidade é o mesmo cobrado pela operadora. A diferença está em quem fica do seu lado quando você mais precisa: na contratação, no uso e na renovação.</p>
+      </div>
+      <div class="porque-card">
+        <div class="numero">02</div>
+        <h3>+25 anos comparando, negociando e resolvendo.</h3>
+        <p>Não vendemos um plano. Desenhamos a combinação que faz sentido para você ou sua empresa — e seguramos a mão na hora de usar a apólice, autorizar procedimento ou negociar reajuste.</p>
+      </div>
+      <div class="porque-card">
+        <div class="numero">03</div>
+        <h3>Atendimento humano, sem labirinto de URA.</h3>
+        <p>Você fala direto com seu consultor pelo WhatsApp. Sem call center, sem ficar repetindo CPF para três atendentes diferentes. Relação real, com nome e responsabilidade.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMO FUNCIONA -->
+<section class="bloco">
+  <div class="container">
+    <div class="titulo-bloco">
+      <span class="eyebrow">Como funciona</span>
+      <h2>Da primeira conversa à apólice ativa em 4 passos.</h2>
+    </div>
+    <div class="passos-grid">
+      <div class="passo-card">
+        <div class="num-passo">1</div>
+        <h4>Você nos chama no WhatsApp</h4>
+        <p>Conta seu cenário: idade, perfil, tamanho da empresa, o que valoriza.</p>
+      </div>
+      <div class="passo-card">
+        <div class="num-passo">2</div>
+        <h4>Comparamos as operadoras</h4>
+        <p>Em até 24h trazemos as melhores opções de custo-benefício do seu perfil.</p>
+      </div>
+      <div class="passo-card">
+        <div class="num-passo">3</div>
+        <h4>Você escolhe sem pressão</h4>
+        <p>Explicamos cada cláusula. Você decide com clareza, não com pressa.</p>
+      </div>
+      <div class="passo-card">
+        <div class="num-passo">4</div>
+        <h4>Cuidamos da apólice</h4>
+        <p>Cadastro, documentação e suporte ao longo de toda a vigência.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SOBRE -->
+<section class="bloco cinza" id="sobre">
+  <div class="container">
+    <div class="sobre-grid">
+      <div class="sobre-conteudo">
+        <span class="eyebrow">Sobre a Diplomata</span>
+        <h2>Uma corretora curitibana que envelheceu junto com seus clientes.</h2>
+        <p>Há mais de 25 anos a Diplomata Seguros atua em Curitiba como corretora especializada em benefícios — saúde, vida e odontológico, para pessoas físicas e jurídicas.</p>
+        <p>Nossa diferença é simples: aqui ninguém é número. Quem te atendeu na primeira cotação é quem vai te atender quando seu plano precisar de uma autorização, quando sua empresa crescer e quando chegar a hora de renegociar reajuste.</p>
+        <ul class="sobre-bullets">
+          <li>Especialização em benefícios PME e coletivos</li>
+          <li>Gestão de risco corporativa</li>
+          <li>Atendimento consultivo, não comissionista</li>
+          <li>Sede própria em Santa Quitéria, Curitiba</li>
+        </ul>
+      </div>
+      <div class="sobre-visual">
+        <div class="num-grande">25<sup>+</sup></div>
+        <div class="num-label">anos cuidando de quem importa</div>
+        <p class="frase">"A relação com nossos clientes é mais antiga que muitos planos de saúde do mercado. É por isso que a maioria deles continua aqui — e nos indica."</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="bloco" id="faq">
+  <div class="container">
+    <div class="titulo-bloco">
+      <span class="eyebrow">Perguntas frequentes</span>
+      <h2>Dúvidas comuns, respostas diretas.</h2>
+    </div>
+
+    <div class="faq-lista">
+      <details class="faq-item">
+        <summary>Contratar com a Diplomata é mais caro que ir direto na operadora?</summary>
+        <div class="resposta">Não. O valor da mensalidade é exatamente o mesmo. A operadora já remunera o corretor — então você tem assessoria especializada sem custo adicional.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Atendem todo o Brasil ou só Curitiba?</summary>
+        <div class="resposta">Nossa sede é em Curitiba, mas trabalhamos com operadoras de cobertura nacional (Bradesco Saúde, SulAmérica, Amil, Hapvida, MedSenior). Atendemos clientes em todo o Paraná e em outros estados.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Minha empresa tem 3 funcionários, consigo plano empresarial?</summary>
+        <div class="resposta">Sim. Trabalhamos com planos coletivos PME a partir de 2 vidas. Em muitos casos o plano empresarial sai mais barato que o individual com cobertura equivalente.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Vocês ajudam na hora de usar o plano e em problemas com a operadora?</summary>
+        <div class="resposta">Sim. Esse é justamente o trabalho de um corretor sério: você fala com a gente, e a gente vai até a operadora resolver autorização, glosa, reembolso ou reajuste.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Como faço para começar?</summary>
+        <div class="resposta">Basta nos chamar no WhatsApp (41) 99134-2273 ou preencher o formulário no topo da página. Em até 24h trazemos as melhores opções para o seu perfil.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="cta-final">
+  <div class="container">
+    <h2>Pronto para falar com <strong>quem cuida</strong> em vez de quem só vende?</h2>
+    <p>Chame um consultor da Diplomata agora. Sem compromisso, sem call center, sem ligação invasiva.</p>
+    <div class="ctas-row">
+      <a href="https://wa.me/5541991342273?text=Ol%C3%A1%2C%20gostaria%20de%20uma%20cota%C3%A7%C3%A3o" class="btn-primario">
+        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Falar no WhatsApp
+      </a>
+      <a href="tel:+554133453355" class="btn-secundario">📞 (41) 3345-3355</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="grid-foot">
+      <div>
+        <div class="logo-foot">DIPLOMATA<span>SEGUROS</span></div>
+        <p class="descricao-foot">Corretora especializada em benefícios em Curitiba/PR. Saúde, vida e odontológico para pessoas físicas e empresas há mais de 25 anos.</p>
+        <p style="font-size:13px;">R. Irati, 558A — Santa Quitéria<br>Curitiba/PR</p>
+      </div>
+      <div>
+        <h5>Planos</h5>
+        <ul>
+          <li><a href="#planos">Saúde individual</a></li>
+          <li><a href="#planos">Saúde empresarial</a></li>
+          <li><a href="#planos">Seguro de vida</a></li>
+          <li><a href="#planos">Plano odontológico</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Operadoras</h5>
+        <ul>
+          <li>Unimed Curitiba</li>
+          <li>Bradesco Saúde</li>
+          <li>SulAmérica</li>
+          <li>Hapvida, Amil e outras</li>
+        </ul>
+      </div>
+      <div>
+        <h5>Contato</h5>
+        <ul>
+          <li>(41) 3345-3355</li>
+          <li>WhatsApp (41) 99134-2273</li>
+          <li>WhatsApp (41) 98891-7168</li>
+          <li>comercial@diplomataseguros.com.br</li>
+        </ul>
+      </div>
+    </div>
+    <div class="copy">© Diplomata Seguros. Todos os direitos reservados. Corretora registrada na SUSEP.</div>
+  </div>
+</footer>
+
+<a href="https://wa.me/5541991342273?text=Ol%C3%A1%2C%20gostaria%20de%20uma%20cota%C3%A7%C3%A3o" class="wa-float" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+</body>
+</html>
