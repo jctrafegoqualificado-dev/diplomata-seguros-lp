@@ -1,0 +1,1271 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Análise Competitiva — Diplomata Seguros | 9 corretoras do mercado</title>
+<meta name="description" content="Mapeamento estratégico dos concorrentes diretos, indiretos e líderes de mercado da Diplomata Seguros. Posicionamento, mídia paga, maturidade digital e brechas competitivas.">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --azul: #0a2540;
+    --azul-medio: #14365c;
+    --azul-claro: #1e4778;
+    --dourado: #c9a86a;
+    --dourado-escuro: #a98948;
+    --vermelho: #c83a3a;
+    --verde: #2f8a5e;
+    --branco: #ffffff;
+    --cinza-bg: #f6f7fa;
+    --cinza-borda: #e3e6ec;
+    --cinza-texto: #4a5568;
+    --cinza-fraco: #718096;
+    --sombra: 0 4px 20px rgba(10, 37, 64, 0.08);
+    --sombra-forte: 0 18px 50px rgba(10, 37, 64, 0.18);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Inter', sans-serif; color: var(--azul); background: var(--branco); line-height: 1.65; -webkit-font-smoothing: antialiased; }
+  img { max-width: 100%; display: block; }
+  a { color: inherit; text-decoration: none; }
+  .container { max-width: 1180px; margin: 0 auto; padding: 0 24px; }
+  .container-narrow { max-width: 920px; margin: 0 auto; padding: 0 24px; }
+  .serif { font-family: 'Playfair Display', serif; }
+
+  /* HEADER */
+  header {
+    background: var(--branco);
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid var(--cinza-borda);
+  }
+  header .container { display: flex; justify-content: space-between; align-items: center; }
+  .logo-wrap { display: flex; flex-direction: column; line-height: 1.1; }
+  .logo {
+    font-size: 20px;
+    font-weight: 900;
+    color: var(--azul);
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+  }
+  .logo span { color: var(--dourado); font-weight: 700; }
+  .tagline-logo {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--cinza-fraco);
+    margin-top: 4px;
+  }
+  header nav { display: flex; align-items: center; gap: 28px; }
+  header nav a { color: var(--cinza-texto); font-size: 13px; font-weight: 500; transition: color .2s; }
+  header nav a:hover { color: var(--azul); }
+  .voltar {
+    background: var(--cinza-bg);
+    border: 1px solid var(--cinza-borda);
+    padding: 10px 18px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--azul) !important;
+  }
+  .voltar:hover { background: var(--azul); color: var(--branco) !important; }
+
+  /* HERO */
+  .hero {
+    background: linear-gradient(135deg, var(--azul) 0%, var(--azul-medio) 60%, var(--azul-claro) 100%);
+    color: var(--branco);
+    padding: 100px 0 110px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -120px; right: -120px;
+    width: 460px; height: 460px;
+    background: radial-gradient(circle, rgba(201,168,106,0.18) 0%, transparent 70%);
+  }
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: -180px; left: -120px;
+    width: 380px; height: 380px;
+    background: radial-gradient(circle, rgba(201,168,106,0.10) 0%, transparent 70%);
+  }
+  .hero .container-narrow { text-align: center; position: relative; }
+  .selo {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(201,168,106,0.15);
+    border: 1px solid rgba(201,168,106,0.4);
+    padding: 10px 22px;
+    border-radius: 30px;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--dourado);
+    margin-bottom: 28px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+  .hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 52px;
+    font-weight: 700;
+    line-height: 1.15;
+    margin-bottom: 22px;
+    letter-spacing: -0.5px;
+  }
+  .hero h1 em { color: var(--dourado); font-style: italic; }
+  .hero p.sub {
+    font-size: 18px;
+    color: rgba(255,255,255,0.85);
+    max-width: 680px;
+    margin: 0 auto;
+  }
+  .hero .meta-info {
+    margin-top: 40px;
+    padding-top: 32px;
+    border-top: 1px solid rgba(255,255,255,0.15);
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+  }
+  .hero .meta-item { text-align: center; }
+  .hero .meta-item .v { font-family: 'Playfair Display', serif; font-size: 32px; font-weight: 700; color: var(--dourado); line-height: 1; }
+  .hero .meta-item .l { font-size: 11px; color: rgba(255,255,255,0.7); margin-top: 8px; letter-spacing: 2px; text-transform: uppercase; }
+
+  /* AVISO METODOLÓGICO */
+  .aviso {
+    background: #fdf6e3;
+    border-left: 4px solid var(--dourado);
+    padding: 28px 32px;
+    margin: 50px auto -20px;
+    max-width: 920px;
+    border-radius: 0 10px 10px 0;
+  }
+  .aviso .titulo { font-weight: 800; color: var(--azul); font-size: 14px; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 10px; }
+  .aviso p { font-size: 15px; color: var(--cinza-texto); line-height: 1.65; }
+  .aviso p + p { margin-top: 10px; }
+
+  /* SEÇÃO */
+  section.bloco { padding: 90px 0; }
+  section.bloco.cinza { background: var(--cinza-bg); }
+  .titulo-secao { text-align: center; max-width: 760px; margin: 0 auto 60px; }
+  .titulo-secao .eyebrow { display: inline-block; color: var(--dourado-escuro); font-size: 12px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 18px; }
+  .titulo-secao h2 { font-family: 'Playfair Display', serif; font-size: 40px; font-weight: 700; line-height: 1.2; letter-spacing: -0.5px; margin-bottom: 16px; }
+  .titulo-secao p { font-size: 17px; color: var(--cinza-texto); }
+  .titulo-secao .divisor { width: 50px; height: 3px; background: var(--dourado); margin: 24px auto 0; }
+
+  /* SUMÁRIO */
+  .sumario-bloco {
+    background: var(--cinza-bg);
+    border-radius: 18px;
+    padding: 50px 50px;
+    max-width: 980px;
+    margin: 0 auto;
+    border: 1px solid var(--cinza-borda);
+  }
+  .sumario-bloco h3 { font-family: 'Playfair Display', serif; font-size: 26px; margin-bottom: 14px; color: var(--azul); }
+  .sumario-bloco > p { font-size: 16px; color: var(--cinza-texto); margin-bottom: 28px; }
+  .sumario-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .sumario-item {
+    background: var(--branco);
+    border-radius: 10px;
+    padding: 22px;
+    border-left: 4px solid var(--dourado);
+  }
+  .sumario-item .label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--dourado-escuro); margin-bottom: 8px; }
+  .sumario-item .corp { font-size: 15px; font-weight: 700; color: var(--azul); line-height: 1.4; }
+
+  /* CARDS DE CONCORRENTES */
+  .concorrente-card {
+    background: var(--branco);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: var(--sombra);
+    border: 1px solid var(--cinza-borda);
+    margin-bottom: 32px;
+  }
+  .conc-header {
+    padding: 30px 36px 24px;
+    border-bottom: 1px solid var(--cinza-borda);
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+  .conc-header h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--azul);
+    line-height: 1.1;
+  }
+  .conc-header .sede {
+    font-size: 13px;
+    color: var(--cinza-fraco);
+    margin-top: 6px;
+    font-weight: 500;
+  }
+  .conc-tags { display: flex; gap: 8px; flex-wrap: wrap; }
+  .tag {
+    font-size: 11px;
+    font-weight: 700;
+    padding: 6px 12px;
+    border-radius: 20px;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+  }
+  .tag-azul { background: rgba(10,37,64,0.10); color: var(--azul); }
+  .tag-dourado { background: rgba(201,168,106,0.20); color: var(--dourado-escuro); }
+  .tag-verde { background: rgba(47,138,94,0.15); color: var(--verde); }
+  .tag-vermelho { background: rgba(200,58,58,0.10); color: var(--vermelho); }
+  .tag-cinza { background: var(--cinza-bg); color: var(--cinza-texto); }
+
+  .conc-body { padding: 26px 36px 30px; }
+  .conc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px 40px; }
+  .conc-grid .item .l { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--dourado-escuro); margin-bottom: 6px; }
+  .conc-grid .item .v { font-size: 15px; color: var(--cinza-texto); line-height: 1.5; }
+  .conc-grid .item.full { grid-column: 1 / -1; }
+  .conc-grid .item .v strong { color: var(--azul); }
+
+  .conc-leitura {
+    margin-top: 24px;
+    padding-top: 24px;
+    border-top: 1px dashed var(--cinza-borda);
+    background: var(--cinza-bg);
+    padding: 22px 26px;
+    border-radius: 10px;
+    border-left: 4px solid var(--azul);
+    margin-left: -10px;
+    margin-right: -10px;
+  }
+  .conc-leitura .l { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--azul); margin-bottom: 8px; }
+  .conc-leitura .v { font-size: 15px; color: var(--cinza-texto); line-height: 1.65; }
+
+  /* MATRIZ COMPARATIVA */
+  .matriz-wrap { overflow-x: auto; }
+  .matriz {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+    background: var(--branco);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--sombra);
+  }
+  .matriz th, .matriz td { padding: 14px 12px; text-align: center; border-bottom: 1px solid var(--cinza-borda); }
+  .matriz th {
+    background: var(--azul);
+    color: var(--branco);
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    text-align: left;
+  }
+  .matriz th:first-child { text-align: left; }
+  .matriz td:first-child { text-align: left; font-weight: 700; color: var(--azul); }
+  .matriz tr.diplomata { background: rgba(201,168,106,0.10); }
+  .matriz tr.diplomata td:first-child { color: var(--dourado-escuro); }
+  .matriz .ok { color: var(--verde); font-weight: 700; }
+  .matriz .nok { color: var(--vermelho); font-weight: 700; }
+  .matriz .neut { color: var(--cinza-fraco); }
+  .matriz tbody tr:hover { background: var(--cinza-bg); }
+
+  /* PADRÕES OBSERVADOS / BRECHAS */
+  .padroes-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 26px; }
+  .padrao-card {
+    background: var(--branco);
+    border-radius: 14px;
+    padding: 32px 30px;
+    border-top: 4px solid var(--dourado);
+    box-shadow: var(--sombra);
+  }
+  .padrao-card .num {
+    font-family: 'Playfair Display', serif;
+    font-size: 46px;
+    font-weight: 700;
+    color: var(--dourado);
+    line-height: 1;
+    margin-bottom: 14px;
+  }
+  .padrao-card h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--azul);
+    margin-bottom: 12px;
+    line-height: 1.3;
+  }
+  .padrao-card p {
+    font-size: 15px;
+    color: var(--cinza-texto);
+    line-height: 1.65;
+  }
+
+  .brechas-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  .brecha-card {
+    background: linear-gradient(135deg, var(--azul) 0%, var(--azul-medio) 100%);
+    color: var(--branco);
+    border-radius: 14px;
+    padding: 36px 32px;
+    position: relative;
+    overflow: hidden;
+  }
+  .brecha-card::before {
+    content: '';
+    position: absolute;
+    top: -50px; right: -50px;
+    width: 180px; height: 180px;
+    background: radial-gradient(circle, rgba(201,168,106,0.20) 0%, transparent 70%);
+  }
+  .brecha-card .num-roma {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    color: var(--dourado);
+    font-weight: 700;
+    margin-bottom: 14px;
+    position: relative;
+  }
+  .brecha-card h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 14px;
+    line-height: 1.3;
+    position: relative;
+  }
+  .brecha-card p {
+    font-size: 14px;
+    color: rgba(255,255,255,0.85);
+    line-height: 1.65;
+    position: relative;
+  }
+  .brecha-card .quem-ataca {
+    margin-top: 18px;
+    padding-top: 16px;
+    border-top: 1px solid rgba(255,255,255,0.15);
+    font-size: 12px;
+    color: var(--dourado);
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    position: relative;
+  }
+
+  /* PLANO DE AÇÃO */
+  .plano-acao {
+    background: var(--branco);
+    border-radius: 16px;
+    padding: 50px;
+    box-shadow: var(--sombra-forte);
+    border: 1px solid var(--cinza-borda);
+  }
+  .acao-item {
+    display: grid;
+    grid-template-columns: 60px 1fr auto;
+    gap: 24px;
+    align-items: center;
+    padding: 22px 0;
+    border-bottom: 1px solid var(--cinza-borda);
+  }
+  .acao-item:last-child { border-bottom: none; }
+  .acao-item .ordem {
+    width: 50px; height: 50px;
+    background: var(--azul);
+    color: var(--dourado);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 700;
+  }
+  .acao-item .conteudo h5 { font-size: 17px; font-weight: 800; color: var(--azul); margin-bottom: 4px; }
+  .acao-item .conteudo p { font-size: 14px; color: var(--cinza-texto); line-height: 1.5; }
+  .acao-item .prioridade {
+    font-size: 11px;
+    font-weight: 700;
+    padding: 6px 12px;
+    border-radius: 20px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+  .pri-alta { background: rgba(200,58,58,0.10); color: var(--vermelho); }
+  .pri-media { background: rgba(201,168,106,0.20); color: var(--dourado-escuro); }
+  .pri-baixa { background: rgba(47,138,94,0.15); color: var(--verde); }
+
+  /* FOOTER */
+  footer {
+    background: #061829;
+    color: rgba(255,255,255,0.65);
+    padding: 50px 0 28px;
+    font-size: 14px;
+    text-align: center;
+  }
+  footer .logo-foot { color: var(--branco); font-size: 20px; font-weight: 900; letter-spacing: 1.5px; margin-bottom: 14px; }
+  footer .logo-foot span { color: var(--dourado); }
+  footer p { font-size: 13px; line-height: 1.7; max-width: 620px; margin: 0 auto 8px; opacity: 0.8; }
+  footer .copy {
+    margin-top: 30px;
+    padding-top: 22px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    font-size: 12px;
+    opacity: 0.6;
+  }
+
+  /* RESPONSIVO */
+  @media (max-width: 960px) {
+    .hero h1 { font-size: 34px; }
+    .titulo-secao h2 { font-size: 28px; }
+    .hero .meta-info { gap: 24px; }
+    .conc-grid { grid-template-columns: 1fr; }
+    .sumario-grid, .padroes-grid, .brechas-grid { grid-template-columns: 1fr; }
+    .sumario-bloco { padding: 32px 26px; }
+    .plano-acao { padding: 30px 22px; }
+    .acao-item { grid-template-columns: 50px 1fr; gap: 14px; }
+    .acao-item .prioridade { grid-column: 2; justify-self: start; }
+    header nav a:not(.voltar) { display: none; }
+    section.bloco { padding: 60px 0; }
+    .hero { padding: 60px 0 70px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <a href="../" class="logo-wrap">
+      <span class="logo">DIPLOMATA<span>SEGUROS</span></span>
+      <span class="tagline-logo">Análise competitiva</span>
+    </a>
+    <nav>
+      <a href="#diretos">Diretos</a>
+      <a href="#indiretos">Indiretos</a>
+      <a href="#lideres">Líderes</a>
+      <a href="#padroes">Padrões</a>
+      <a href="#brechas">Brechas</a>
+      <a href="../" class="voltar">← Voltar</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container-narrow">
+    <span class="selo">✦ Estudo confidencial · 9 corretoras analisadas</span>
+    <h1>Mapeamento competitivo do mercado de <em>corretagem de benefícios</em>.</h1>
+    <p class="sub">Posicionamento, mídia paga, maturidade digital e brechas de mercado dos concorrentes diretos, dos players um degrau acima e das corretoras líderes no varejo. Fontes: sites oficiais, Meta Ad Library, Google Ads Transparency Center, LinkedIn institucional e cobertura editorial pública.</p>
+    <div class="meta-info">
+      <div class="meta-item"><div class="v">9</div><div class="l">Corretoras analisadas</div></div>
+      <div class="meta-item"><div class="v">3</div><div class="l">Clusters competitivos</div></div>
+      <div class="meta-item"><div class="v">5</div><div class="l">Brechas identificadas</div></div>
+      <div class="meta-item"><div class="v">8</div><div class="l">Ações priorizadas</div></div>
+    </div>
+  </div>
+</section>
+
+<div class="container">
+  <div class="aviso">
+    <div class="titulo">⚠ Limitação metodológica</div>
+    <p><strong>Meta Ad Library e Google Ads Transparency Center</strong> são SPAs com renderização JavaScript que não foram extraíveis via fetch automatizado nesta varredura. <strong>Volumes exatos de criativos ativos não foram confirmados</strong> — porém, indícios indiretos (LPs com parâmetros de tracking <em>IdFonte</em>, subdomínios por operadora, sponsored posts visíveis, plataformas de cotação terceirizadas) sugerem fortemente que a maioria roda mídia paga ativa em Meta e Google.</p>
+    <p>Para confirmação numérica de criativos e investimento, recomenda-se acesso manual via navegador ou ferramenta com headless Chromium (Meta Ad Library Report, SimilarWeb, SemRush). O posicionamento e arquitetura digital — que é o que interessa para a estratégia — foi extraído com fidelidade.</p>
+  </div>
+</div>
+
+<!-- SUMÁRIO -->
+<section class="bloco">
+  <div class="container">
+    <div class="titulo-secao">
+      <span class="eyebrow">Sumário executivo</span>
+      <h2>Os 9 nomes mapeados, em 3 camadas competitivas.</h2>
+      <div class="divisor"></div>
+    </div>
+
+    <div class="sumario-bloco">
+      <div class="sumario-grid">
+        <div class="sumario-item">
+          <div class="label">Concorrentes diretos</div>
+          <div class="corp">Asa Benefícios · Unipam · Planecorp</div>
+        </div>
+        <div class="sumario-item">
+          <div class="label">Um degrau acima (varejo PME)</div>
+          <div class="corp">Rota Seguros · Paraná Corretora · América Broker</div>
+        </div>
+        <div class="sumario-item">
+          <div class="label">Líderes a superar</div>
+          <div class="corp">Allcross · Mazza Broker · Brascare</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONCORRENTES DIRETOS -->
+<section class="bloco cinza" id="diretos">
+  <div class="container">
+    <div class="titulo-secao">
+      <span class="eyebrow">Camada 1 · Mesmo terreno</span>
+      <h2>Concorrentes diretos</h2>
+      <p>Corretoras de benefícios em Curitiba, perfil e porte equivalentes à Diplomata. Disputam o mesmo cliente PME no mesmo CEP.</p>
+      <div class="divisor"></div>
+    </div>
+
+    <!-- ASA BENEFÍCIOS -->
+    <div class="concorrente-card">
+      <div class="conc-header">
+        <div>
+          <h3>Asa Benefícios</h3>
+          <div class="sede">Curitiba/PR · Rua Marechal Deodoro, 857 sala 601</div>
+        </div>
+        <div class="conc-tags">
+          <span class="tag tag-azul">PF + PME + Grandes</span>
+          <span class="tag tag-vermelho">Site desatualizado</span>
+          <span class="tag tag-cinza">Sem cotador</span>
+        </div>
+      </div>
+      <div class="conc-body">
+        <div class="conc-grid">
+          <div class="item">
+            <div class="l">Posicionamento</div>
+            <div class="v">"Consultoria especializada em benefícios para pequenas, médias e grandes empresas." Discurso B2B clássico, sem nicho declarado.</div>
+          </div>
+          <div class="item">
+            <div class="l">CTA dominante</div>
+            <div class="v">"Solicite um orçamento" via formulário. <strong>Sem WhatsApp em destaque, sem cotador online.</strong></div>
+          </div>
+          <div class="item">
+            <div class="l">Operadoras visíveis no site</div>
+            <div class="v">Nenhuma logo exibida na home (gap clássico de prova social).</div>
+          </div>
+          <div class="item">
+            <div class="l">Prova social numérica</div>
+            <div class="v">Nenhum número visível. Sem anos, sem clientes, sem vidas. Copyright 2023.</div>
+          </div>
+          <div class="item full">
+            <div class="l">Mídia paga (indícios)</div>
+            <div class="v">Facebook com ~1.028 curtidas (baixa). Meta Ad Library e Google Ads Transparency não confirmaram ads ativos. <strong>Aparente baixíssimo investimento em digital.</strong></div>
+          </div>
+        </div>
+        <div class="conc-leitura">
+          <div class="l">Leitura estratégica</div>
+          <div class="v">É o concorrente mais frágil dos diretos. Posicionamento difuso (cobre do PF a grandes contas sem foco), site subutilizado, sem cotador e sem WhatsApp visível. Vulnerável a qualquer corretora que comunique nicho claro + prova social numérica + funil moderno.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- UNIPAM -->
+    <div class="concorrente-card">
+      <div class="conc-header">
+        <div>
+          <h3>Unipam</h3>
+          <div class="sede">Curitiba/PR · Jardim das Américas · desde 2007 (15 anos)</div>
+        </div>
+        <div class="conc-tags">
+          <span class="tag tag-azul">Varejo PF + PME 2+</span>
+          <span class="tag tag-dourado">ISO 9001</span>
+          <span class="tag tag-verde">+49.862 vidas atendidas</span>
+        </div>
+      </div>
+      <div class="conc-body">
+        <div class="conc-grid">
+          <div class="item">
+            <div class="l">Posicionamento</div>
+            <div class="v">"Planos de saúde em Curitiba com soluções para sua necessidade." Gancho comercial agressivo: <strong>"até 50% off em relação aos planos individuais"</strong> via coletivos.</div>
+          </div>
+          <div class="item">
+            <div class="l">CTA dominante</div>
+            <div class="v">WhatsApp + formulário. Uso de <strong>bit.ly</strong> (`bit.ly/vendasclinipamplanos`) → sinaliza origem em campanhas pagas.</div>
+          </div>
+          <div class="item">
+            <div class="l">Operadoras visíveis</div>
+            <div class="v">Unimed, Bradesco, Amil, Hapvida/Notre Dame, MedSenior, Nossa Saúde, Medsul, Paraná Clínicas — <strong>portfólio amplo e exposto</strong>.</div>
+          </div>
+          <div class="item">
+            <div class="l">Prova social numérica</div>
+            <div class="v"><strong>"49.862 pessoas atendidas em 15 anos"</strong> — único dos diretos com número forte na home. ISO 9001 é diferencial raro no setor.</div>
+          </div>
+          <div class="item full">
+            <div class="l">Mídia paga (indícios)</div>
+            <div class="v">Uso de bit.ly + linguagem promocional clássica de Ads ("até 50% off") sugerem campanhas pagas ativas. Não confirmado via Ad Library.</div>
+          </div>
+        </div>
+        <div class="conc-leitura">
+          <div class="l">Leitura estratégica</div>
+          <div class="v">É o mais "varejista" dos diretos — joga em <strong>preço e volume</strong>. ISO 9001 e os ~50k vidas são âncoras de confiança fortes. Rebater no preço é caro; o caminho é <strong>desautorizar o gancho do "desconto"</strong> mostrando custo escondido de plano coletivo mal vendido (churn de operadora, rede ruim, glosa).</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PLANECORP -->
+    <div class="concorrente-card">
+      <div class="conc-header">
+        <div>
+          <h3>Planecorp</h3>
+          <div class="sede">Curitiba/PR · ~3.000 clientes desde 2015 · 20 corretores</div>
+        </div>
+        <div class="conc-tags">
+          <span class="tag tag-azul">PF + PME 5-99 + Pet</span>
+          <span class="tag tag-dourado">Posiciona como "consultora"</span>
+          <span class="tag tag-verde">Cobertura editorial Gazeta do Povo</span>
+        </div>
+      </div>
+      <div class="conc-body">
+        <div class="conc-grid">
+          <div class="item">
+            <div class="l">Posicionamento</div>
+            <div class="v">"O melhor plano de saúde em um clique." Quer ser <strong>consultora de saúde</strong>, não apenas corretora. Atendimento "taylormade" e "qualidade do atendimento acima do produto" — narrativa premium.</div>
+          </div>
+          <div class="item">
+            <div class="l">CTA dominante</div>
+            <div class="v">"CONTRATE AGORA" + WhatsApp direto. Sem cotador automático.</div>
+          </div>
+          <div class="item">
+            <div class="l">Operadoras visíveis</div>
+            <div class="v">Amil, Clinipam, Paraná Clínicas, SulAmérica, Bradesco, MedSenior, Nossa Saúde, Dental Uni, Health for Pet, Odonto Company, VR (vale-refeição). <strong>Portfólio mais largo dos diretos</strong>.</div>
+          </div>
+          <div class="item">
+            <div class="l">Diferenciais reais</div>
+            <div class="v"><strong>Assessoria jurídica em contratos de saúde</strong> (sócio advogado — vantagem rara), portfólio integrado (saúde + odonto + VR/VT/VC + pet), faturamento 10× em 2022 vs 2021 (release Gazz Conecta).</div>
+          </div>
+          <div class="item full">
+            <div class="l">Mídia paga (indícios)</div>
+            <div class="v">Instagram @planecorp comercial e ativo. Cobertura editorial paga/orgânica relevante. Forte presença de PR/branding institucional.</div>
+          </div>
+        </div>
+        <div class="conc-leitura">
+          <div class="l">Leitura estratégica</div>
+          <div class="v">É o concorrente mais sofisticado em <strong>narrativa</strong>. Joga o jogo de autoridade técnica + advocacia da saúde. Faixa-alvo 5–99 vidas <strong>deixa o micro-PME (2–4 vidas) descoberto</strong> — brecha clara para a Diplomata se posicionar como especialista em PME 2–29.</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- INDIRETOS -->
+<section class="bloco" id="indiretos">
+  <div class="container">
+    <div class="titulo-secao">
+      <span class="eyebrow">Camada 2 · Um degrau acima</span>
+      <h2>Concorrentes indiretos</h2>
+      <p>Corretoras que já operam em outro patamar de maturidade digital — cotador online, LPs segmentadas, vocabulário de RH. O destino que a Diplomata quer alcançar no curto prazo.</p>
+      <div class="divisor"></div>
+    </div>
+
+    <!-- ROTA SEGUROS -->
+    <div class="concorrente-card">
+      <div class="conc-header">
+        <div>
+          <h3>Rota Seguros</h3>
+          <div class="sede">Sede BH · filiais Curitiba e Londrina · multi-cidade BR</div>
+        </div>
+        <div class="conc-tags">
+          <span class="tag tag-azul">PF + MEI + PME 2+</span>
+          <span class="tag tag-dourado">LPs regionalizadas</span>
+          <span class="tag tag-vermelho">Site com bugs (contadores zerados)</span>
+        </div>
+      </div>
+      <div class="conc-body">
+        <div class="conc-grid">
+          <div class="item">
+            <div class="l">Posicionamento</div>
+            <div class="v">"O melhor em Planos de Saúde em Curitiba está aqui!" — apelo direto a <strong>preço</strong> ("descontos de até 40%").</div>
+          </div>
+          <div class="item">
+            <div class="l">Maturidade digital</div>
+            <div class="v">LPs por cidade (`/curitiba/`), LPs por operadora (`/qualicorp/`), blog ativo, FB/IG/<strong>TikTok</strong>/LinkedIn, chat WhatsApp persistente. <strong>Arquitetura clássica de operação Google Ads em escala</strong>.</div>
+          </div>
+          <div class="item">
+            <div class="l">Operadoras visíveis</div>
+            <div class="v">15+ operadoras logadas: Amil, AllCare, Bradesco, GNDI Sul, Metlife, MedSênior, MedSul, Nossa Saúde, Odontoprev, Paraná Clínicas, Qualicorp, SulAmérica, Unimed Curitiba, Unimed Odonto, UniCor.</div>
+          </div>
+          <div class="item">
+            <div class="l">CTA dominante</div>
+            <div class="v">"Solicitar Cotação!" + WhatsApp persistente — funil duplo.</div>
+          </div>
+          <div class="item full">
+            <div class="l">Mídia paga (indícios)</div>
+            <div class="v">Arquitetura de LPs regionais por cidade + LPs por operadora é assinatura inequívoca de <strong>operação contínua de Google Search Ads em volume</strong>. Não confirmado numericamente.</div>
+          </div>
+        </div>
+        <div class="conc-leitura">
+          <div class="l">Leitura estratégica</div>
+          <div class="v">Empresa <strong>mineira que invadiu o Sul</strong> com playbook de performance multi-cidade. Forte tecnicamente, mas o site exibe contadores zerados (bug em produção) — flanco competitivo. Compete em <strong>preço e escala</strong>, não em relacionamento — o ângulo de "Diplomata = 25 anos no mesmo CEP de Curitiba, conhece operadora por operadora" é defensável.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PARANÁ CORRETORA -->
+    <div class="concorrente-card">
+      <div class="conc-header">
+        <div>
+          <h3>Paraná Corretora</h3>
+          <div class="sede">Curitiba/PR · São Braz · desde 1996 (29 anos)</div>
+        </div>
+        <div class="conc-tags">
+          <span class="tag tag-azul">PF + PME</span>
+          <span class="tag tag-dourado">0800 dedicado</span>
+          <span class="tag tag-vermelho">Homepage com erro 500</span>
+        </div>
+      </div>
+      <div class="conc-body">
+        <div class="conc-grid">
+          <div class="item">
+            <div class="l">Posicionamento</div>
+            <div class="v">"Cote Familiar e Empresarial Online" — marketplace/agregador, <strong>"contratação 100% online, sem visita de corretores"</strong>.</div>
+          </div>
+          <div class="item">
+            <div class="l">Maturidade digital</div>
+            <div class="v">Cotador online, 0800 113 1000 (raro no nicho), uso de plataforma terceirizada (`economizecomseuplano`). Site principal com erro 500 na data da análise.</div>
+          </div>
+          <div class="item">
+            <div class="l">Anos de mercado</div>
+            <div class="v"><strong>29 anos</strong> (fundada 1996) — mais antiga que a Diplomata.</div>
+          </div>
+          <div class="item">
+            <div class="l">CTA dominante</div>
+            <div class="v">Cotação online + 0800 + WhatsApp — funil multi-fricção.</div>
+          </div>
+          <div class="item full">
+            <div class="l">Mídia paga (indícios)</div>
+            <div class="v">Subdomínio em plataforma terceirizada de cotação (`parana-corretora.economizecomseuplano.com.br`) é assinatura de operação Search Ads.</div>
+          </div>
+        </div>
+        <div class="conc-leitura">
+          <div class="l">Leitura estratégica</div>
+          <div class="v">Posicionou-se cedo como "cotador-robô sem visita". É o <strong>oposto da proposta da Diplomata</strong> — terreno fértil para argumento: "plano de saúde errado custa 6× o orçamento errado. Por isso conversamos antes de cotar." Site quebrado é vulnerabilidade adicional.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- AMÉRICA BROKER -->
+    <div class="concorrente-card">
+      <div class="conc-header">
+        <div>
+          <h3>América Broker</h3>
+          <div class="sede">Curitiba/PR · Água Verde · desde 2012 (10+ anos)</div>
+        </div>
+        <div class="conc-tags">
+          <span class="tag tag-azul">PF + PME até 100 + Corporate</span>
+          <span class="tag tag-verde">+7.000 vidas / Troféu Pinhão de Ouro 2023</span>
+          <span class="tag tag-dourado">LP de funil separada</span>
+        </div>
+      </div>
+      <div class="conc-body">
+        <div class="conc-grid">
+          <div class="item">
+            <div class="l">Posicionamento</div>
+            <div class="v">Consultoria full-service. "Auxilia de ponta a ponta para você cuidar do que mais importa: a sua saúde." <strong>Segmenta por porte com clareza cirúrgica</strong>: PF, PME até 100, Corporate >100.</div>
+          </div>
+          <div class="item">
+            <div class="l">Maturidade digital</div>
+            <div class="v">LP separada para PF 100% online (`lps.americabroker.com.br`), newsletter, SUSEP visível, política de privacidade, FB/IG/YouTube/LinkedIn. <strong>Arquitetura de funil segmentado.</strong></div>
+          </div>
+          <div class="item">
+            <div class="l">Diferenciais quantificados</div>
+            <div class="v"><strong>"+7.000 vidas protegidas"</strong>, "+20 parceiros", "+10 anos", case "reduziu turnover de 11% para <1%" — fala a língua do <strong>RH e do financeiro</strong>, não do consumidor.</div>
+          </div>
+          <div class="item">
+            <div class="l">Prova social nomeada</div>
+            <div class="v">4 depoimentos nomeados (Berenice Ribeiro, Jadson Barros, Cláudia Lazarotto, Malu Andrade) elogiando consultoras específicas. <strong>Único dos 9 com prova social personalizada de verdade</strong>.</div>
+          </div>
+          <div class="item full">
+            <div class="l">Reconhecimento</div>
+            <div class="v"><strong>Vencedora do Troféu Pinhão de Ouro 2023</strong> na categoria Corretora de Saúde (ISB Brasil — prêmio regional). É plataforma autorizada Qualicorp e Supermed.</div>
+          </div>
+        </div>
+        <div class="conc-leitura">
+          <div class="l">Leitura estratégica</div>
+          <div class="v">O <strong>concorrente mais sofisticado de toda a análise</strong>. Joga exatamente o jogo de autoridade técnica em que a Diplomata também quer estar. Difícil rebater em métricas atuais — o ângulo para superá-la é <strong>profundidade de relacionamento + 25 anos no mesmo CEP</strong> (a América tem só 10) e <strong>especialização declarada em PME 2–29 vidas</strong> (a América mistura PF + PME + Corporate, perdendo foco no micro-PME).</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- LÍDERES -->
+<section class="bloco cinza" id="lideres">
+  <div class="container">
+    <div class="titulo-secao">
+      <span class="eyebrow">Camada 3 · Referências a superar</span>
+      <h2>Líderes de varejo</h2>
+      <p>Operações em escala que definem o teto do que uma corretora de benefícios pode comunicar. Não são alvos imediatos, mas mostram para onde o mercado caminha.</p>
+      <div class="divisor"></div>
+    </div>
+
+    <!-- ALLCROSS -->
+    <div class="concorrente-card">
+      <div class="conc-header">
+        <div>
+          <h3>Allcross (Grupo)</h3>
+          <div class="sede">Curitiba/PR · presença nacional · desde 2006</div>
+        </div>
+        <div class="conc-tags">
+          <span class="tag tag-azul">PF + PME + Empresarial + Seguros gerais</span>
+          <span class="tag tag-verde">50+ unidades · 1.000+ corretores</span>
+          <span class="tag tag-dourado">0800 nacional</span>
+        </div>
+      </div>
+      <div class="conc-body">
+        <div class="conc-grid">
+          <div class="item">
+            <div class="l">Posicionamento</div>
+            <div class="v">"O maior grupo de corretoras do Brasil." <strong>"Vendemos valor e nunca preço"</strong> (Rogério Moreira, Gerente Comercial). Discurso de escala institucional.</div>
+          </div>
+          <div class="item">
+            <div class="l">Diferenciais quantificados</div>
+            <div class="v">"<strong>20+ anos / 1.000+ corretores / 50+ unidades / 14 assessorias / 100+ operadoras / +25% de crescimento em 2024</strong>". LinkedIn faixa 1.001–5.000 funcionários.</div>
+          </div>
+          <div class="item">
+            <div class="l">Arquitetura digital</div>
+            <div class="v">Subdomínios por vertical (`segurodeauto.allcross.com.br`), sub-brand Prime Broker para seguros gerais, blog AllCross News com SEO de cidade, painel do corretor próprio, mapa interativo com 31 cidades.</div>
+          </div>
+          <div class="item">
+            <div class="l">CTA dominante</div>
+            <div class="v">Cotação + 0800 + WhatsApp + "Contratar" — funil multi-fricção completo.</div>
+          </div>
+          <div class="item full">
+            <div class="l">Por que é referência</div>
+            <div class="v"><strong>(1) densidade geográfica</strong> com 50+ unidades; <strong>(2) modelo de rede</strong> que monetiza 1.000+ corretores numa única marca; <strong>(3) verticalização por produto</strong> (saúde + auto + Prime Broker) que escala paid sem canibalização.</div>
+          </div>
+        </div>
+        <div class="conc-leitura">
+          <div class="l">Leitura estratégica</div>
+          <div class="v">Allcross opera em outro jogo — escala de grupo, holding, franqueado. Não é alvo direto. Mas define o teto institucional: <strong>quando uma PME compara cotações, Allcross é o "nome grande"</strong>. Diplomata supera nessa comparação com <strong>profundidade local + relacionamento de 25 anos no mesmo CEP</strong>.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MAZZA BROKER -->
+    <div class="concorrente-card">
+      <div class="conc-header">
+        <div>
+          <h3>Mazza Broker</h3>
+          <div class="sede">Sede Florianópolis/SC · filial Curitiba/PR</div>
+        </div>
+        <div class="conc-tags">
+          <span class="tag tag-azul">PME + PF (incluindo sênior)</span>
+          <span class="tag tag-dourado">LP separada com IdFonte (tracking)</span>
+          <span class="tag tag-cinza">Operação boutique bi-estado</span>
+        </div>
+      </div>
+      <div class="conc-body">
+        <div class="conc-grid">
+          <div class="item">
+            <div class="l">Posicionamento</div>
+            <div class="v">"O plano de saúde ideal, de forma <strong>descomplicada</strong>." Foco em consultoria personalizada — não compete em preço.</div>
+          </div>
+          <div class="item">
+            <div class="l">Arquitetura digital</div>
+            <div class="v">LP de cotação isolada (`saude.mazzabroker.com.br`) com campo <strong>IdFonte</strong> (parâmetro UTM de campanha). Domínio genérico paralelo (`mazzaplanosdesaude.com.br`) para SEO de cabeça de busca.</div>
+          </div>
+          <div class="item">
+            <div class="l">Diferenciais quantificados</div>
+            <div class="v">Reivindica "+30 anos no segmento" (fonte secundária — não destacado no site). LinkedIn 11–50 funcionários. <strong>Nenhum número de vidas exposto.</strong></div>
+          </div>
+          <div class="item">
+            <div class="l">CTA dominante</div>
+            <div class="v">WhatsApp persistente + LP de cotação separada com formulário multicampo (nome, e-mail, vidas, origem).</div>
+          </div>
+          <div class="item full">
+            <div class="l">Por que é referência</div>
+            <div class="v"><strong>Arquitetura de domínios para SEO + paid</strong>, posicionamento consultivo sem briga de preço, pegada bi-estado serve como template de escala regional para corretora de porte médio.</div>
+          </div>
+        </div>
+        <div class="conc-leitura">
+          <div class="l">Leitura estratégica</div>
+          <div class="v">Boutique premium. Joga consultivo, mas tem <strong>blog anêmico (3 artigos)</strong> e nenhum número de vidas exposto — gap de prova social. Diplomata supera com longevidade declarada + cases nominais.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- BRASCARE -->
+    <div class="concorrente-card">
+      <div class="conc-header">
+        <div>
+          <h3>Brascare</h3>
+          <div class="sede">Curitiba/PR · Batel · desde 2022 (~4 anos)</div>
+        </div>
+        <div class="conc-tags">
+          <span class="tag tag-azul">PME (foco cirúrgico)</span>
+          <span class="tag tag-dourado">Subdomínios por operadora</span>
+          <span class="tag tag-vermelho">Sem números, sem cases, sem blog</span>
+        </div>
+      </div>
+      <div class="conc-body">
+        <div class="conc-grid">
+          <div class="item">
+            <div class="l">Posicionamento</div>
+            <div class="v">"Imagine um futuro onde sua equipe estará sempre <strong>saudável, produtiva e motivada</strong>." Foco quase 100% PME — vocabulário de employer branding, não de preço.</div>
+          </div>
+          <div class="item">
+            <div class="l">Arquitetura digital</div>
+            <div class="v"><strong>Subdomínios verticalizados por operadora</strong>: `hapvida.brascareplanosdesaude.com.br`, `medsenior.brascareplanosdesaude.com.br`. Captura buscas de marca de operadora.</div>
+          </div>
+          <div class="item">
+            <div class="l">Diferenciais quantificados</div>
+            <div class="v"><strong>Nenhum.</strong> Sem números, sem anos, sem vidas, sem cases, sem blog. Capital social R$ 100 mil — porte pequeno.</div>
+          </div>
+          <div class="item">
+            <div class="l">CTA dominante</div>
+            <div class="v"><strong>WhatsApp único</strong> (5 botões espalhados, todos pro mesmo número). Funnel mínimo viável de altíssima velocidade.</div>
+          </div>
+          <div class="item full">
+            <div class="l">Por que é referência</div>
+            <div class="v"><strong>(1) subdomínios por operadora</strong> capturam tráfego de marca; <strong>(2) foco cirúrgico em PME</strong> sem dispersão; <strong>(3) funil enxutíssimo</strong> de zero atrito.</div>
+          </div>
+        </div>
+        <div class="conc-leitura">
+          <div class="l">Leitura estratégica</div>
+          <div class="v">É <strong>empresa nova (2022)</strong> sem patrimônio de marca. Disputa Curitiba só na presença digital ostensiva — não em relacionamento. Diplomata <strong>"existia antes da Brascare existir"</strong> é argumento literal e defensável.</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- MATRIZ COMPARATIVA -->
+<section class="bloco">
+  <div class="container">
+    <div class="titulo-secao">
+      <span class="eyebrow">Visão consolidada</span>
+      <h2>Matriz comparativa de maturidade digital</h2>
+      <p>Onde cada concorrente está hoje em relação aos elementos que definem uma corretora moderna no varejo PME.</p>
+      <div class="divisor"></div>
+    </div>
+
+    <div class="matriz-wrap">
+      <table class="matriz">
+        <thead>
+          <tr>
+            <th>Corretora</th>
+            <th>Cotador online</th>
+            <th>WhatsApp visível</th>
+            <th>LP segmentada</th>
+            <th>Subdomínios por nicho</th>
+            <th>Números próprios</th>
+            <th>Cases nominados</th>
+            <th>Blog ativo</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="diplomata">
+            <td>Diplomata (hoje)</td>
+            <td class="nok">Não</td>
+            <td class="ok">Sim</td>
+            <td class="nok">Não</td>
+            <td class="nok">Não</td>
+            <td class="neut">+25 anos</td>
+            <td class="nok">Não</td>
+            <td class="nok">Parado em 2023</td>
+          </tr>
+          <tr>
+            <td>Asa Benefícios</td>
+            <td class="nok">Não</td>
+            <td class="nok">Não</td>
+            <td class="nok">Não</td>
+            <td class="nok">Não</td>
+            <td class="nok">Nenhum</td>
+            <td class="nok">Não</td>
+            <td class="nok">Não</td>
+          </tr>
+          <tr>
+            <td>Unipam</td>
+            <td class="neut">Formulário</td>
+            <td class="ok">Sim</td>
+            <td class="nok">Não</td>
+            <td class="nok">Não</td>
+            <td class="ok">+49.862 vidas / 15 anos / ISO 9001</td>
+            <td class="nok">Não</td>
+            <td class="nok">Não</td>
+          </tr>
+          <tr>
+            <td>Planecorp</td>
+            <td class="nok">Não</td>
+            <td class="ok">Sim</td>
+            <td class="ok">Sim (PF / PME / Pet)</td>
+            <td class="nok">Não</td>
+            <td class="neut">10× faturamento (PR)</td>
+            <td class="nok">Não</td>
+            <td class="nok">Não</td>
+          </tr>
+          <tr>
+            <td>Rota Seguros</td>
+            <td class="ok">Sim</td>
+            <td class="ok">Sim</td>
+            <td class="ok">Por cidade + operadora</td>
+            <td class="neut">Parcial</td>
+            <td class="nok">Bugado</td>
+            <td class="nok">Não</td>
+            <td class="ok">Sim</td>
+          </tr>
+          <tr>
+            <td>Paraná Corretora</td>
+            <td class="ok">Sim</td>
+            <td class="ok">Sim + 0800</td>
+            <td class="nok">Não</td>
+            <td class="nok">Não</td>
+            <td class="neut">29 anos</td>
+            <td class="nok">Não</td>
+            <td class="nok">Não</td>
+          </tr>
+          <tr>
+            <td>América Broker</td>
+            <td class="ok">Sim</td>
+            <td class="ok">Sim</td>
+            <td class="ok">Sim (PF 100% online)</td>
+            <td class="nok">Não</td>
+            <td class="ok">+7.000 vidas / +20 parceiros / +10 anos</td>
+            <td class="ok">4 depoimentos nomeados</td>
+            <td class="neut">Parcial</td>
+          </tr>
+          <tr>
+            <td>Allcross</td>
+            <td class="ok">Sim</td>
+            <td class="ok">Sim + 0800 nacional</td>
+            <td class="ok">Por vertical</td>
+            <td class="ok">Sim (auto)</td>
+            <td class="ok">20+ anos / 1.000+ corretores / 50+ unidades</td>
+            <td class="neut">Patrocínio esportivo</td>
+            <td class="ok">Sim (AllCross News)</td>
+          </tr>
+          <tr>
+            <td>Mazza Broker</td>
+            <td class="ok">Sim (LP separada)</td>
+            <td class="ok">Sim</td>
+            <td class="ok">Sim</td>
+            <td class="ok">Sim (saude.)</td>
+            <td class="neut">+30 anos (fonte externa)</td>
+            <td class="nok">Não</td>
+            <td class="nok">3 artigos</td>
+          </tr>
+          <tr>
+            <td>Brascare</td>
+            <td class="nok">Não</td>
+            <td class="ok">Sim</td>
+            <td class="nok">Não</td>
+            <td class="ok">Por operadora (Hapvida / MedSênior)</td>
+            <td class="nok">Nenhum</td>
+            <td class="nok">Não</td>
+            <td class="nok">Não</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- PADRÕES OBSERVADOS -->
+<section class="bloco cinza" id="padroes">
+  <div class="container">
+    <div class="titulo-secao">
+      <span class="eyebrow">Padrões observados</span>
+      <h2>O que todos fazem que a Diplomata ainda não faz</h2>
+      <p>Sete elementos recorrentes entre os 9 mapeados — alguns são paridade mínima, outros já são diferencial.</p>
+      <div class="divisor"></div>
+    </div>
+
+    <div class="padroes-grid">
+      <div class="padrao-card">
+        <div class="num">01</div>
+        <h4>Cotador / formulário de cotação visível na home</h4>
+        <p>5 dos 9 concorrentes têm cotador online ou formulário de cotação como elemento central (Rota, Paraná, América, Allcross, Mazza). É <strong>paridade mínima</strong> hoje no setor — sem isso, a Diplomata perde competitividade básica.</p>
+      </div>
+      <div class="padrao-card">
+        <div class="num">02</div>
+        <h4>Números concretos acima da dobra</h4>
+        <p>"+7.000 vidas" (América), "+49.862 atendidos" (Unipam), "+1.000 corretores / 50+ unidades" (Allcross). A Diplomata tem 25+ anos mas <strong>não expõe esse número no hero</strong> — patrimônio invisível.</p>
+      </div>
+      <div class="padrao-card">
+        <div class="num">03</div>
+        <h4>Vocabulário de RH, não de "plano de saúde"</h4>
+        <p>América fala "turnover", "absenteísmo", "produtividade". Brascare fala "equipe saudável e motivada". O decisor de PME compra <strong>retenção</strong>, não cobertura — e nenhum dos 9 traduz isso completo, abrindo espaço.</p>
+      </div>
+      <div class="padrao-card">
+        <div class="num">04</div>
+        <h4>Segmentação explícita por porte</h4>
+        <p>América separa PME até 100 de Corporate >100. Planecorp mira 5-99. A Diplomata cobre "PME" como categoria genérica. <strong>Especialização declarada em 2-29 vidas</strong> está livre para ocupar.</p>
+      </div>
+      <div class="padrao-card">
+        <div class="num">05</div>
+        <h4>Subdomínios / LPs por nicho</h4>
+        <p>Brascare por operadora, Allcross por vertical, Rota por cidade. <strong>Captura tráfego de cabeça de busca</strong> sem canibalizar o institucional. A Diplomata tem 1 site para tudo.</p>
+      </div>
+      <div class="padrao-card">
+        <div class="num">06</div>
+        <h4>Prova social nomeada</h4>
+        <p>Só a América Broker traz <strong>4 depoimentos com nome + foto + consultora específica</strong>. Os outros 8 não têm. É barato de produzir e brutal de impacto — gap aberto.</p>
+      </div>
+      <div class="padrao-card">
+        <div class="num">07</div>
+        <h4>Múltiplos canais de contato + tracking de origem</h4>
+        <p>Os mais maduros (América, Mazza, Allcross) usam parâmetros <strong>IdFonte</strong> nas LPs, telefone 0800, formulário, WhatsApp, newsletter. Identificam de onde veio o lead — a base de qualquer campanha paga séria.</p>
+      </div>
+      <div class="padrao-card">
+        <div class="num">08</div>
+        <h4>Portal RH para o cliente PME</h4>
+        <p>Nenhum dos 9 entrega portal próprio com download de carteirinha, segunda via, abertura de sinistro, dashboard de utilização. Os "painéis" são todos terceirizados. <strong>Brecha técnica enorme</strong>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BRECHAS -->
+<section class="bloco" id="brechas">
+  <div class="container">
+    <div class="titulo-secao">
+      <span class="eyebrow">Brechas competitivas</span>
+      <h2>Onde a Diplomata pode disputar e vencer</h2>
+      <p>Posições defensáveis identificadas no mapa — terreno livre para a Diplomata ocupar antes que outros cheguem.</p>
+      <div class="divisor"></div>
+    </div>
+
+    <div class="brechas-grid">
+      <div class="brecha-card">
+        <div class="num-roma">I</div>
+        <h4>Longevidade comprovada como autoridade</h4>
+        <p>Diplomata: 25+ anos. Brascare: 4. América: 10. Mazza: bi-estado mas sem expor anos. Allcross: 20. <strong>A Diplomata é a corretora mais antiga em atividade no segmento PME de Curitiba que ainda atua sob mesma marca e mesmo CEP.</strong> Esse ativo está completamente subutilizado hoje.</p>
+        <div class="quem-ataca">Ataca: Brascare · Mazza · América</div>
+      </div>
+
+      <div class="brecha-card">
+        <div class="num-roma">II</div>
+        <h4>Especialista declarado em PME 2–29 vidas</h4>
+        <p>Planecorp mira 5–99. América separa "até 100". Brascare é PME mas sem porte declarado. <strong>Ninguém é declaradamente "o corretor da PME pequena curitibana de 2 a 29 vidas"</strong> — micro-PME (2-4 vidas) está exposto. É faixa de altíssimo volume e baixa concorrência discursiva.</p>
+        <div class="quem-ataca">Ataca: Planecorp · Asa · genéricos</div>
+      </div>
+
+      <div class="brecha-card">
+        <div class="num-roma">III</div>
+        <h4>Cases nominais de PMEs de Curitiba</h4>
+        <p>Só América tem 4 depoimentos nomeados — nenhum quantificado em métrica de RH. <strong>10 a 20 cases reais de PMEs de Curitiba (nome, foto, métrica de turnover/economia/tempo)</strong> coloca a Diplomata na frente de todos. Produção barata, impacto desproporcional.</p>
+        <div class="quem-ataca">Ataca: 8 dos 9 concorrentes</div>
+      </div>
+
+      <div class="brecha-card">
+        <div class="num-roma">IV</div>
+        <h4>Vocabulário do decisor PME (RH/sócio)</h4>
+        <p>Mercado fala "planos", "operadoras", "coberturas". O decisor sente <strong>"turnover", "absenteísmo", "custo de reposição", "produtividade", "moral do time"</strong>. América começou a traduzir. A Diplomata pode adotar isso como vocabulário central — em LP, blog, anúncios.</p>
+        <div class="quem-ataca">Ataca: Rota · Paraná · Unipam · Brascare</div>
+      </div>
+
+      <div class="brecha-card">
+        <div class="num-roma">V</div>
+        <h4>Portal RH whitelabel com marca Diplomata</h4>
+        <p>Nenhum dos 9 entrega portal próprio. Os "painéis" existentes são todos terceirizados (paineldocorretor, pxtecnologia). Diplomata pode entregar <strong>portal RH com carteirinha digital, segunda via, abertura de sinistro, dashboard de uso</strong> — mesmo whitelabel, com a marca exposta. É a "tecnologia visível" que falta.</p>
+        <div class="quem-ataca">Ataca: todos os 9</div>
+      </div>
+
+      <div class="brecha-card">
+        <div class="num-roma">VI</div>
+        <h4>"Anti cotador-robô" como contraposicionamento</h4>
+        <p>Paraná Corretora se vende como "contratação online sem visita". Rota como "desconto 40%". Há terreno fértil para a Diplomata se posicionar como <strong>"plano errado custa 6× o orçamento errado"</strong> — atendimento humano consultivo como vantagem racional, não emocional.</p>
+        <div class="quem-ataca">Ataca: Paraná · Rota · Brascare</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PLANO DE AÇÃO -->
+<section class="bloco cinza">
+  <div class="container-narrow">
+    <div class="titulo-secao">
+      <span class="eyebrow">Plano de ação</span>
+      <h2>8 movimentos priorizados</h2>
+      <p>Em ordem de impacto vs. esforço. Os 3 primeiros são paridade mínima — sem eles, não há campanha paga eficaz.</p>
+      <div class="divisor"></div>
+    </div>
+
+    <div class="plano-acao">
+      <div class="acao-item">
+        <div class="ordem">1</div>
+        <div class="conteudo">
+          <h5>Headline com longevidade no hero</h5>
+          <p>"Há 25 anos cuidando do plano de saúde das PMEs de Curitiba." Coloca em segundos a vantagem nº1 contra todos os 9.</p>
+        </div>
+        <div class="prioridade pri-alta">Alta</div>
+      </div>
+      <div class="acao-item">
+        <div class="ordem">2</div>
+        <div class="conteudo">
+          <h5>SUSEP + CNPJ visíveis no rodapé</h5>
+          <p>Compliance básico e gap competitivo (8 dos 9 também não exibem com clareza). Custo zero.</p>
+        </div>
+        <div class="prioridade pri-alta">Alta</div>
+      </div>
+      <div class="acao-item">
+        <div class="ordem">3</div>
+        <div class="conteudo">
+          <h5>Cotador / formulário multicampo na home</h5>
+          <p>Paridade mínima. Sem isso, Ads pago vai sangrar. Nome, e-mail, WhatsApp, número de vidas, IdFonte para tracking.</p>
+        </div>
+        <div class="prioridade pri-alta">Alta</div>
+      </div>
+      <div class="acao-item">
+        <div class="ordem">4</div>
+        <div class="conteudo">
+          <h5>LP dedicada para PME 2–29 vidas</h5>
+          <p>Segmento declarado como especialidade. Headline focada em turnover/absenteísmo. Funil próprio para campanhas Meta + Google.</p>
+        </div>
+        <div class="prioridade pri-alta">Alta</div>
+      </div>
+      <div class="acao-item">
+        <div class="ordem">5</div>
+        <div class="conteudo">
+          <h5>10 cases nominais de PMEs curitibanas</h5>
+          <p>Nome da empresa, foto do sócio/RH, métrica de RH (rotatividade caiu X%, economia Y%). Produção: 1 mês. Impacto: anos.</p>
+        </div>
+        <div class="prioridade pri-media">Média</div>
+      </div>
+      <div class="acao-item">
+        <div class="ordem">6</div>
+        <div class="conteudo">
+          <h5>Pixel Meta + Google Tag Manager + Conversions API</h5>
+          <p>Infraestrutura de tracking. Sem isso, não há remarketing. É a base do tráfego pago sério em ticket consultivo.</p>
+        </div>
+        <div class="prioridade pri-media">Média</div>
+      </div>
+      <div class="acao-item">
+        <div class="ordem">7</div>
+        <div class="conteudo">
+          <h5>Blog reativo: 1 post quinzenal com tema PME</h5>
+          <p>"Quando vale trocar de operadora?", "Quanto custa por mês um plano para 5 vidas em Curitiba?". SEO + autoridade + munição para Ads.</p>
+        </div>
+        <div class="prioridade pri-media">Média</div>
+      </div>
+      <div class="acao-item">
+        <div class="ordem">8</div>
+        <div class="conteudo">
+          <h5>Portal RH whitelabel com marca Diplomata</h5>
+          <p>Brecha técnica nº1 do mercado. Carteirinha digital, segunda via, dashboard de uso. Pode ser terceirizado, mas com marca exposta.</p>
+        </div>
+        <div class="prioridade pri-baixa">Estratégica</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="logo-foot">DIPLOMATA<span>SEGUROS</span></div>
+    <p>Estudo competitivo confidencial · Mapeamento de 9 corretoras de benefícios</p>
+    <p>Compilado em maio de 2026 · Fontes: sites oficiais, Meta Ad Library, Google Ads Transparency Center, LinkedIn institucional, cobertura editorial pública (Gazeta do Povo, SEGS, Vempradescomplica), CNPJ.biz, Casa dos Dados</p>
+    <div class="copy">Documento elaborado para uso interno. Dados públicos consolidados em maio/2026 e sujeitos a alteração.</div>
+  </div>
+</footer>
+
+</body>
+</html>
