@@ -47,6 +47,15 @@
     text-transform: uppercase;
   }
   .logo span { color: var(--dourado); font-weight: 700; }
+  .logo-wrap { display: flex; flex-direction: column; line-height: 1.1; }
+  .tagline-logo {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--cinza-fraco);
+    margin-top: 4px;
+  }
   header nav { display: flex; align-items: center; gap: 32px; }
   header nav a { color: var(--cinza-texto); font-size: 14px; font-weight: 500; transition: color .2s; }
   header nav a:hover { color: var(--azul); }
@@ -270,6 +279,121 @@
   .servico-card h3 { font-family: 'Playfair Display', serif; font-size: 24px; font-weight: 700; margin-bottom: 14px; line-height: 1.3; }
   .servico-card p { color: var(--cinza-texto); font-size: 15px; line-height: 1.6; }
 
+  /* DIPLOMATA BENEFÍCIOS — SUBBRAND PME */
+  .beneficios-bloco {
+    padding: 110px 0;
+    background: linear-gradient(135deg, #f9f6ef 0%, #f3ecda 100%);
+    position: relative;
+    overflow: hidden;
+  }
+  .beneficios-bloco::before {
+    content: '';
+    position: absolute;
+    top: -100px; right: -100px;
+    width: 360px; height: 360px;
+    background: radial-gradient(circle, rgba(201,168,106,0.20) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .bnf-grid { display: grid; grid-template-columns: 1.1fr 1fr; gap: 70px; align-items: center; position: relative; }
+  .bnf-selo {
+    display: inline-block;
+    background: var(--azul);
+    color: var(--dourado);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    padding: 8px 18px;
+    border-radius: 30px;
+    margin-bottom: 22px;
+  }
+  .bnf-marca {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    margin-bottom: 28px;
+    padding-bottom: 22px;
+    border-bottom: 2px solid var(--dourado);
+  }
+  .bnf-marca-mae {
+    font-size: 28px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    color: var(--azul);
+  }
+  .bnf-marca-linha {
+    font-family: 'Playfair Display', serif;
+    font-size: 30px;
+    font-weight: 700;
+    font-style: italic;
+    color: var(--dourado-escuro);
+    letter-spacing: 0.5px;
+  }
+  .bnf-conteudo h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.25;
+    color: var(--azul);
+    margin-bottom: 22px;
+    letter-spacing: -0.5px;
+  }
+  .bnf-conteudo p {
+    font-size: 16px;
+    color: var(--cinza-texto);
+    margin-bottom: 16px;
+    line-height: 1.7;
+  }
+  .bnf-conteudo p strong { color: var(--azul); }
+  .bnf-bullets {
+    list-style: none;
+    margin-top: 26px;
+  }
+  .bnf-bullets li {
+    padding: 14px 0 14px 36px;
+    position: relative;
+    border-bottom: 1px solid rgba(10,37,64,0.10);
+    font-size: 15px;
+    color: var(--cinza-texto);
+  }
+  .bnf-bullets li:last-child { border-bottom: none; }
+  .bnf-bullets li strong { color: var(--azul); font-weight: 700; }
+  .bnf-bullets li::before {
+    content: '✦';
+    position: absolute;
+    left: 0;
+    top: 14px;
+    color: var(--dourado);
+    font-size: 14px;
+  }
+
+  .bnf-visual { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+  .bnf-card-num {
+    background: var(--branco);
+    border-radius: 14px;
+    padding: 32px 26px;
+    text-align: center;
+    box-shadow: 0 8px 28px rgba(10,37,64,0.10);
+    border: 1px solid rgba(201,168,106,0.25);
+    transition: transform .25s, box-shadow .25s;
+  }
+  .bnf-card-num:hover { transform: translateY(-4px); box-shadow: 0 14px 38px rgba(10,37,64,0.15); }
+  .bnf-card-num .bnf-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 54px;
+    font-weight: 700;
+    color: var(--dourado-escuro);
+    line-height: 1;
+    margin-bottom: 10px;
+  }
+  .bnf-card-num .bnf-num sup { font-size: 24px; vertical-align: super; }
+  .bnf-card-num .bnf-num-label {
+    font-size: 13px;
+    color: var(--cinza-texto);
+    line-height: 1.4;
+  }
+  .bnf-card-num .bnf-num-label strong { display: block; color: var(--azul); font-weight: 700; margin-top: 2px; }
+
   /* OPERADORAS */
   .operadoras-bloco { padding: 90px 0; background: var(--branco); }
   .operadoras-bloco .titulo {
@@ -434,6 +558,11 @@
     .hero h1 { font-size: 38px; }
     .titulo-bloco h2, .quem-conteudo h2, .operadoras-bloco h2 { font-size: 30px; }
     .servicos-grid, .valores-grid, .contato-grid { grid-template-columns: 1fr; }
+    .bnf-grid { grid-template-columns: 1fr; gap: 40px; }
+    .bnf-conteudo h2 { font-size: 26px; }
+    .bnf-marca-mae { font-size: 22px; }
+    .bnf-marca-linha { font-size: 24px; }
+    .beneficios-bloco { padding: 70px 0; }
     .faixa-numeros .container { grid-template-columns: repeat(2, 1fr); gap: 30px; }
     .faixa-numeros .item:nth-child(2) { border-right: none; }
     footer .grid-foot { grid-template-columns: 1fr; gap: 36px; }
@@ -460,11 +589,15 @@
 
 <header>
   <div class="container">
-    <a href="#" class="logo">DIPLOMATA<span>SEGUROS</span></a>
+    <a href="#" class="logo-wrap">
+      <span class="logo">DIPLOMATA<span>SEGUROS</span></span>
+      <span class="tagline-logo">Saúde · Vida · Odonto · Benefícios</span>
+    </a>
     <nav>
       <a href="#quem-somos">Quem somos</a>
       <a href="#historia">Nossa história</a>
       <a href="#solucoes">Soluções</a>
+      <a href="#beneficios">Para empresas</a>
       <a href="#operadoras">Operadoras</a>
       <a href="#contato">Contato</a>
     </nav>
@@ -595,6 +728,51 @@
         </div>
         <h3>Planos odontológicos</h3>
         <p>Cuidado bucal individual e corporativo, com rede credenciada ampla e cobertura para tratamentos preventivos, restauradores e ortodônticos. Frequentemente combinado ao plano de saúde para reduzir o custo total.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DIPLOMATA BENEFÍCIOS — SUBBRAND PME -->
+<section class="beneficios-bloco" id="beneficios">
+  <div class="container">
+    <div class="bnf-grid">
+      <div class="bnf-conteudo">
+        <span class="bnf-selo">Linha para empresas</span>
+        <div class="bnf-marca">
+          <span class="bnf-marca-mae">DIPLOMATA</span>
+          <span class="bnf-marca-linha">BENEFÍCIOS</span>
+        </div>
+        <h2>Saúde, vida e bem-estar para o seu time — desenhados para PMEs do Paraná.</h2>
+        <p>A linha <strong>Diplomata Benefícios</strong> é a face B2B da nossa corretora. Atende empresas a partir de <strong>2 vidas</strong>, com consultoria dedicada para reduzir custo de plano, melhorar cobertura e blindar a empresa contra reajustes mal negociados.</p>
+        <p>Para PMEs em crescimento, plano de saúde deixou de ser benefício e virou ferramenta de retenção. A Diplomata Benefícios cuida disso pra você — da primeira cotação à renovação anual.</p>
+
+        <ul class="bnf-bullets">
+          <li><strong>Cotação coletiva</strong> em até 24h entre 8 operadoras</li>
+          <li><strong>Gestão de vidas</strong> — inclusão, exclusão e movimentações sem dor de cabeça</li>
+          <li><strong>Negociação anual de reajuste</strong> com base no histórico de sinistralidade</li>
+          <li><strong>Pacote integrado</strong>: saúde + odonto + vida em grupo, com economia no bundle</li>
+          <li><strong>Consultor único</strong> da contratação à renovação — sem call center</li>
+        </ul>
+      </div>
+
+      <div class="bnf-visual">
+        <div class="bnf-card-num">
+          <div class="bnf-num">2</div>
+          <div class="bnf-num-label">A partir de<br><strong>2 vidas</strong></div>
+        </div>
+        <div class="bnf-card-num">
+          <div class="bnf-num">24h</div>
+          <div class="bnf-num-label">Cotação em<br><strong>até 24 horas</strong></div>
+        </div>
+        <div class="bnf-card-num">
+          <div class="bnf-num">8<sup>+</sup></div>
+          <div class="bnf-num-label">Operadoras<br><strong>comparadas</strong></div>
+        </div>
+        <div class="bnf-card-num">
+          <div class="bnf-num">1</div>
+          <div class="bnf-num-label">Consultor<br><strong>do começo ao fim</strong></div>
+        </div>
       </div>
     </div>
   </div>
